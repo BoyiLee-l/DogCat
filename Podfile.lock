@@ -1,0 +1,64 @@
+PODS:
+  - Alamofire (4.9.1)
+  - CVCalendar (1.7.0)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - Kingfisher (5.13.4):
+    - Kingfisher/Core (= 5.13.4)
+  - Kingfisher/Core (5.13.4)
+  - MarqueeLabel (4.0.2)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - Realm (5.3.0):
+    - Realm/Headers (= 5.3.0)
+  - Realm/Headers (5.3.0)
+  - RealmSwift (5.3.0):
+    - Realm (= 5.3.0)
+  - SCLAlertView (0.8)
+  - SVProgressHUD (2.2.5)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - CVCalendar
+  - FMDB
+  - Kingfisher
+  - MarqueeLabel
+  - NVActivityIndicatorView
+  - RealmSwift
+  - SCLAlertView
+  - SVProgressHUD
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CVCalendar
+    - FMDB
+    - Kingfisher
+    - MarqueeLabel
+    - NVActivityIndicatorView
+    - Realm
+    - RealmSwift
+    - SCLAlertView
+    - SVProgressHUD
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  CVCalendar: 1174c1b43c1a258970e14c1e8b19ef4106c5900b
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  Kingfisher: d2279a7abece3c7f25a80cd2b7f363ca5cf3f44c
+  MarqueeLabel: f762aa681ae201f66c1d511858b171f75d83013a
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  Realm: 81b533e4d02518e3e36a702d43a716b48bf89ed6
+  RealmSwift: d8954b0c203d532cfa8412ab18e2da01eb071aa4
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: f38ff8e566221a9687f6d3950889fb663ee791f7
+
+COCOAPODS: 1.9.3
