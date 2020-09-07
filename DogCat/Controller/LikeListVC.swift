@@ -66,7 +66,7 @@ extension LikeListVC: UITableViewDelegate,UITableViewDataSource{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "like"{
-            let next = segue.destination as! AddViewController
+            let next = segue.destination as! DetailVC
             let row = myTableView.indexPathForSelectedRow!.row
             let data = likeData[row]
             next.userInfo = data

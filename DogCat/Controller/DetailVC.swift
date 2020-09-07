@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 import MapKit
 
-class AddViewController: UIViewController {
+class DetailVC: UIViewController {
     
     enum DetailData {
         case 網路
@@ -139,7 +139,7 @@ class AddViewController: UIViewController {
     }
 }
 
-extension AddViewController{
+extension DetailVC{
     
     func changeUI(){
         myPhoto.layer.borderColor = UIColor.black.cgColor

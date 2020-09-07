@@ -62,6 +62,7 @@ class PetListVC: UIViewController {
     func requestData(){
         self.myTableView.isHidden = false
         startLoading()
+        
         getFile.getData(url: generateUrl()) { (data) in
             self.dataList = data
             //篩選條件將沒照片的排到後面
@@ -164,7 +165,7 @@ extension PetListVC: UITableViewDelegate, UITableViewDataSource{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailed"{
-            let next = segue.destination as! AddViewController
+            let next = segue.destination as! DetailVC
             let row = myTableView.indexPathForSelectedRow!.row
             if newDataList.isEmpty{
                 let data = dataList[row]

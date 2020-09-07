@@ -29,7 +29,7 @@
 		CE86E73A2459628F00D147D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE86E7382459628F00D147D7 /* Main.storyboard */; };
 		CE86E73F2459629000D147D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE86E73E2459629000D147D7 /* Assets.xcassets */; };
 		CE86E7422459629000D147D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE86E7402459629000D147D7 /* LaunchScreen.storyboard */; };
-		CE86E74D24596E1300D147D7 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86E74C24596E1300D147D7 /* AddViewController.swift */; };
+		CE86E74D24596E1300D147D7 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86E74C24596E1300D147D7 /* DetailVC.swift */; };
 		CE9C5847245A7D91006F12D2 /* PetListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9C5846245A7D91006F12D2 /* PetListVC.swift */; };
 		CE9C584A245A9E4E006F12D2 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9C5849245A9E4E006F12D2 /* libsqlite3.0.tbd */; };
 		CE9C5850245AA5A8006F12D2 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9C584F245AA5A8006F12D2 /* UserInfo.swift */; };
@@ -76,7 +76,7 @@
 		CE86E73E2459629000D147D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE86E7412459629000D147D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE86E7432459629000D147D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE86E74C24596E1300D147D7 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		CE86E74C24596E1300D147D7 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		CE9C5846245A7D91006F12D2 /* PetListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetListVC.swift; sourceTree = "<group>"; };
 		CE9C5849245A9E4E006F12D2 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		CE9C584F245AA5A8006F12D2 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 			children = (
 				CE86E7362459628F00D147D7 /* LikeListVC.swift */,
 				CE9C5846245A7D91006F12D2 /* PetListVC.swift */,
-				CE86E74C24596E1300D147D7 /* AddViewController.swift */,
+				CE86E74C24596E1300D147D7 /* DetailVC.swift */,
 				CE78B19F2480B6930047A9A5 /* MenuController.swift */,
 				CE78B1A12480B69C0047A9A5 /* SidebarMenu.swift */,
 				CE520FFF24D3F3AE009DE9F4 /* MapVC.swift */,
@@ -395,7 +395,7 @@
 				CEAC9FC124862506001F52A9 /* LoadingMoreCell.swift in Sources */,
 				CE86E7332459628F00D147D7 /* AppDelegate.swift in Sources */,
 				CE796F0324FF64820037EC5E /* SearchVC.swift in Sources */,
-				CE86E74D24596E1300D147D7 /* AddViewController.swift in Sources */,
+				CE86E74D24596E1300D147D7 /* DetailVC.swift in Sources */,
 				CE86E7352459628F00D147D7 /* SceneDelegate.swift in Sources */,
 				CE52100024D3F3AE009DE9F4 /* MapVC.swift in Sources */,
 				CE78B1AF2480FAEC0047A9A5 /* SWRevealViewController.m in Sources */,
