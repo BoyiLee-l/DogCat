@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.9.1)
+  - Alamofire (5.1.0)
   - CVCalendar (1.7.0)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
@@ -17,11 +17,12 @@ PODS:
   - RealmSwift (5.3.0):
     - Realm (= 5.3.0)
   - SCLAlertView (0.8)
+  - SnapKit (5.0.1)
   - SVProgressHUD (2.2.5)
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.4)
+  - Alamofire (~> 5.0)
   - CVCalendar
   - FMDB
   - Kingfisher
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - NVActivityIndicatorView
   - RealmSwift
   - SCLAlertView
+  - SnapKit
   - SVProgressHUD
   - SwiftyJSON (~> 4.0)
 
@@ -43,11 +45,12 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - SCLAlertView
+    - SnapKit
     - SVProgressHUD
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   CVCalendar: 1174c1b43c1a258970e14c1e8b19ef4106c5900b
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   Kingfisher: d2279a7abece3c7f25a80cd2b7f363ca5cf3f44c
@@ -56,9 +59,10 @@ SPEC CHECKSUMS:
   Realm: 81b533e4d02518e3e36a702d43a716b48bf89ed6
   RealmSwift: d8954b0c203d532cfa8412ab18e2da01eb071aa4
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: f38ff8e566221a9687f6d3950889fb663ee791f7
+PODFILE CHECKSUM: f34d4e00ec70ddf45efe2f6dcfa21378c11fbb61
 
 COCOAPODS: 1.9.3

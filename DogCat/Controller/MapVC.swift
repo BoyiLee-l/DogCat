@@ -20,6 +20,7 @@ class MapVC: UIViewController {
         super.viewDidLoad()
         print(cllocation)
         setMap()
+        self.navigationItem.title = "收容所位置"
     }
     
     override func viewDidAppear(_ animated: Bool) {

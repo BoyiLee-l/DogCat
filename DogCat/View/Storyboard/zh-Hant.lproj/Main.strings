@@ -1,0 +1,102 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "0tw-9m-YlH"; */
+"0tw-9m-YlH.text" = "Label";
+
+/* Class = "UILabel"; text = "我的收藏"; ObjectID = "28f-pP-gb8"; */
+"28f-pP-gb8.text" = "我的收藏";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4Zo-CB-n9W"; */
+"4Zo-CB-n9W.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "52i-uv-Is6"; */
+"52i-uv-Is6.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "宠物档案"; ObjectID = "55g-A8-8Wr"; */
+"55g-A8-8Wr.title" = "宠物档案";
+
+/* Class = "UILabel"; text = "性別:"; ObjectID = "7Gw-Sz-ofE"; */
+"7Gw-Sz-ofE.text" = "性別:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "88V-9d-m6o"; */
+"88V-9d-m6o.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "小貓資料"; ObjectID = "8cE-Zv-Ps2"; */
+"8cE-Zv-Ps2.title" = "小貓資料";
+
+/* Class = "UILabel"; text = "Dogs"; ObjectID = "B3Q-15-L8N"; */
+"B3Q-15-L8N.text" = "Dogs";
+
+/* Class = "UILabel"; text = "體型"; ObjectID = "BN2-PZ-E5C"; */
+"BN2-PZ-E5C.text" = "體型";
+
+/* Class = "UILabel"; text = "顏色"; ObjectID = "Eqj-Wt-4du"; */
+"Eqj-Wt-4du.text" = "顏色";
+
+/* Class = "UIButton"; normalTitle = "與收容中心聯絡"; ObjectID = "GvY-G9-SEt"; */
+"GvY-G9-SEt.normalTitle" = "與收容中心聯絡";
+
+/* Class = "UILabel"; text = "性別"; ObjectID = "H1j-RQ-t3d"; */
+"H1j-RQ-t3d.text" = "性別";
+
+/* Class = "UILabel"; text = "是否絕育"; ObjectID = "Kqh-C5-5u8"; */
+"Kqh-C5-5u8.text" = "是否絕育";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "R0d-J3-o8h"; */
+"R0d-J3-o8h.title" = "Item";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Rd3-Fm-ZsT"; */
+"Rd3-Fm-ZsT.text" = "Label";
+
+/* Class = "UILabel"; text = "尋獲地點"; ObjectID = "Uaf-fD-cQL"; */
+"Uaf-fD-cQL.text" = "尋獲地點";
+
+/* Class = "UINavigationItem"; title = "小狗資料"; ObjectID = "VLx-JX-MoC"; */
+"VLx-JX-MoC.title" = "小狗資料";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "eST-eQ-Ona"; */
+"eST-eQ-Ona.text" = "Label";
+
+/* Class = "UILabel"; text = "是否絕育:"; ObjectID = "fLT-xZ-oIk"; */
+"fLT-xZ-oIk.text" = "是否絕育:";
+
+/* Class = "UILabel"; text = "年紀"; ObjectID = "huE-4T-EMy"; */
+"huE-4T-EMy.text" = "年紀";
+
+/* Class = "UILabel"; text = "顏色:"; ObjectID = "iKf-Mp-UVE"; */
+"iKf-Mp-UVE.text" = "顏色:";
+
+/* Class = "UILabel"; text = "毛孩領養資料"; ObjectID = "jHP-hX-OT8"; */
+"jHP-hX-OT8.text" = "毛孩領養資料";
+
+/* Class = "UILabel"; text = "年紀:"; ObjectID = "k86-Ae-VfL"; */
+"k86-Ae-VfL.text" = "年紀:";
+
+/* Class = "UITabBarItem"; title = "行程表"; ObjectID = "lEb-FM-VPV"; */
+"lEb-FM-VPV.title" = "行程表";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "lIC-m5-qGM"; */
+"lIC-m5-qGM.title" = "Item";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "oDD-vm-OMl"; */
+"oDD-vm-OMl.text" = "Label";
+
+/* Class = "UILabel"; text = "收容所地址"; ObjectID = "pXe-Og-6wb"; */
+"pXe-Og-6wb.text" = "收容所地址";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qko-2e-Fy1"; */
+"qko-2e-Fy1.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "rU5-GP-LDH"; */
+"rU5-GP-LDH.title" = "Item";
+
+/* Class = "UILabel"; text = "Cats"; ObjectID = "rXF-y7-BPi"; */
+"rXF-y7-BPi.text" = "Cats";
+
+/* Class = "UILabel"; text = "體型:"; ObjectID = "sOC-vu-QyL"; */
+"sOC-vu-QyL.text" = "體型:";
+
+/* Class = "UILabel"; text = "特徵"; ObjectID = "tnB-Ph-xnP"; */
+"tnB-Ph-xnP.text" = "特徵";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "zp3-cG-ZNZ"; */
+"zp3-cG-ZNZ.title" = "Item";

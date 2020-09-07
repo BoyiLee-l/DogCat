@@ -6,8 +6,7 @@ target 'DogCat' do
   use_frameworks!
 
   # Pods for DogCat
- pod ‘FMDB’
- pod 'Alamofire', '~> 4.4'
+ pod 'Alamofire', '~> 5.0'
  pod 'SwiftyJSON', '~> 4.0'
  pod 'SVProgressHUD'
  pod 'SCLAlertView'
@@ -16,4 +15,6 @@ target 'DogCat' do
  pod 'CVCalendar'
  pod 'Kingfisher'
  pod ‘RealmSwift’
+ pod 'SnapKit'
+ pod ‘FMDB’
 end

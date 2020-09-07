@@ -42,6 +42,7 @@ class AddViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setBackground()
         changeUI()
         read()
         viewVaule()
@@ -143,6 +144,9 @@ extension AddViewController{
     func changeUI(){
         myPhoto.layer.borderColor = UIColor.black.cgColor
         myPhoto.layer.borderWidth = 2
+        myPhoto.clipsToBounds = true
+        myPhoto.layer.cornerRadius = 25
+        
         title1.clipsToBounds = true
         title1.layer.cornerRadius = 15
         title2.clipsToBounds = true
@@ -150,28 +154,35 @@ extension AddViewController{
         title3.clipsToBounds = true
         title3.layer.cornerRadius = 15
         
-        title1.layer.borderColor = UIColor.lightGreen.cgColor
+        title1.layer.borderColor = UIColor.olive.cgColor
         title1.layer.borderWidth = 1.5
-        title2.layer.borderColor = UIColor.lightGreen.cgColor
+        title2.layer.borderColor = UIColor.olive.cgColor
         title2.layer.borderWidth = 1.5
-        title3.layer.borderColor = UIColor.lightGreen.cgColor
+        title3.layer.borderColor = UIColor.olive.cgColor
         title3.layer.borderWidth = 1.5
         
-        placeLabel.backgroundColor = .lightGreen
+        placeLabel.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         placeLabel.layer.borderColor = UIColor.olive.cgColor
         placeLabel.layer.borderWidth = 1.5
+        placeLabel.clipsToBounds = true
+        placeLabel.layer.cornerRadius = 15
         
-        shelterLabel.backgroundColor = .lightGreen
+        shelterLabel.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         shelterLabel.layer.borderColor = UIColor.olive.cgColor
         shelterLabel.layer.borderWidth = 1.5
+        shelterLabel.clipsToBounds = true
+        shelterLabel.layer.cornerRadius = 15
         
         telBtn.clipsToBounds = true
         telBtn.layer.cornerRadius = 15
-        telBtn.layer.borderColor = UIColor.lightGreen.cgColor
+        telBtn.layer.borderColor = UIColor.olive.cgColor
         telBtn.layer.borderWidth = 1.5
+        telBtn.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         
         mapBtn.layer.borderColor = UIColor.black.cgColor
         mapBtn.layer.borderWidth = 1.5
+        mapBtn.clipsToBounds = true
+        mapBtn.layer.cornerRadius = 15
     }
     
     func viewVaule(){
@@ -204,9 +215,9 @@ extension AddViewController{
                 userInfo.animalId == animal?.animalId
             }).isEmpty ? false: true
         }
-    
+        
         print(likeCollection)
     }
     
-  
+    
 }

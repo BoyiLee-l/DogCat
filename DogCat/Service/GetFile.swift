@@ -11,17 +11,14 @@ import Alamofire
 import MapKit
 
 class GetFile {
-    
-    var List = [dogData]()
-    
+    //MARK:取網路api資料
     func getData(url:String, completion: @escaping([dogData]) ->Void){
-        Alamofire.request(url).responseJSON{response in
+        AF.request(url).responseJSON{response in
             if let data = response.data {
                 do {
                     let dataList = try JSONDecoder().decode( [dogData].self, from: data)
-                    self.List = dataList
-                    print(data)
-                    completion(self.List)
+                    completion(dataList)
+
                 } catch {
                     print(error.localizedDescription)
                 }
@@ -29,7 +26,7 @@ class GetFile {
         }
     }
     
-    //CLGeocoder地理編碼 地址轉換經緯度位置
+    //MARK:CLGeocoder地理編碼 地址轉換經緯度位置
     func geocode(address: String, completion: @escaping (CLLocationCoordinate2D, Error?) -> ())  {
         CLGeocoder().geocodeAddressString(address) { placemarks, error in
             if let error = error {

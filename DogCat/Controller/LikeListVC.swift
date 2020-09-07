@@ -15,17 +15,17 @@ class LikeListVC: UIViewController{
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var myTableView: UITableView!
     var likeData = [UserInfo]()
-    let getFile = GetFile()    
+    let getFile = GetFile()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         myTableView.dataSource = self
         myTableView.delegate = self
+        setBackground()
         addSideBarMenu(leftMenuButton: menuButton)
-        
         setUI()
-        
-       
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,8 +61,6 @@ extension LikeListVC: UITableViewDelegate,UITableViewDataSource{
         cell.areaLabel.text = getFile.areaName(pkid: pkid)
         print(likeData[indexPath.row].collection)
         
-        cell.myPhoto.layer.borderColor = UIColor.black.cgColor
-        cell.myPhoto.layer.borderWidth = 2
         return cell
     }
     
