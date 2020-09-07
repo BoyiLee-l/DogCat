@@ -62,14 +62,12 @@ class PetListVC: UIViewController {
     func requestData(){
         self.myTableView.isHidden = false
         startLoading()
-        
         getFile.getData(url: generateUrl()) { (data) in
             self.dataList = data
             //篩選條件將沒照片的排到後面
             self.dataList = self.dataList.filter({ $0.albumFile != "" })
-            print(self.dataList.count)
             if self.dataList.isEmpty{
-                self.myTableView.isHidden = true
+               
             }else{
                 self.stopLoading()
                 self.myTableView.reloadData()
@@ -137,7 +135,7 @@ extension PetListVC: UITableViewDelegate, UITableViewDataSource{
         petCell
         
         if dataList.isEmpty{
-            let alertController = UIAlertController(title: "搜尋不到此條件", message: "請重新再一次", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "沒有資料唷", message: "請重新再搜尋一次", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: nil)
