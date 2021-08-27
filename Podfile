@@ -14,5 +14,5 @@ target 'DogCat' do
  pod 'NVActivityIndicatorView'
  pod 'Kingfisher'
  pod 'SnapKit'
- 
+ pod 'RealmSwift', '4.4.0'
 end
