@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SCLAlertView
+
 
 var spinner: UIActivityIndicatorView = {
     let activityView = UIActivityIndicatorView()

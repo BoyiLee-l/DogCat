@@ -1,56 +1,38 @@
 PODS:
   - Alamofire (5.4.3)
   - Kingfisher (6.3.1)
-  - MarqueeLabel (4.3.0)
-  - NVActivityIndicatorView (5.1.1):
-    - NVActivityIndicatorView/Base (= 5.1.1)
-  - NVActivityIndicatorView/Base (5.1.1)
   - Realm (4.4.0):
     - Realm/Headers (= 4.4.0)
   - Realm/Headers (4.4.0)
   - RealmSwift (4.4.0):
     - Realm (= 4.4.0)
-  - SCLAlertView (0.8)
   - SnapKit (5.0.1)
-  - SVProgressHUD (2.2.5)
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0)
   - Kingfisher
-  - MarqueeLabel
-  - NVActivityIndicatorView
   - RealmSwift (= 4.4.0)
-  - SCLAlertView
   - SnapKit
-  - SVProgressHUD
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Kingfisher
-    - MarqueeLabel
-    - NVActivityIndicatorView
     - Realm
     - RealmSwift
-    - SCLAlertView
     - SnapKit
-    - SVProgressHUD
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
-  MarqueeLabel: 02f5ac8fd6877c94564556cb93fa86c70c08baeb
-  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   Realm: e125f464884cda953ebefe70c671b75b03b81b9b
   RealmSwift: 33656a42bd300959a081fc13347376bc478071af
-  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 8ba27bb0ba51ed2336e3f9e537c8fec0527399f7
+PODFILE CHECKSUM: ff55f6cf24900167667feca40b180f4705528bdf
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

@@ -8,10 +8,6 @@ target 'DogCat' do
   # Pods for DogCat
  pod 'Alamofire', '~> 5.0'
  pod 'SwiftyJSON', '~> 4.0'
- pod 'SVProgressHUD'
- pod 'SCLAlertView'
- pod 'MarqueeLabel'
- pod 'NVActivityIndicatorView'
  pod 'Kingfisher'
  pod 'SnapKit'
  pod 'RealmSwift', '4.4.0'
