@@ -11,4 +11,7 @@ target 'DogCat' do
  pod 'Kingfisher'
  pod 'SnapKit'
  pod 'RealmSwift', '4.4.0'
+ pod 'RxSwift'
+ pod 'RxCocoa' 
+ pod 'RxDataSources'
 end
