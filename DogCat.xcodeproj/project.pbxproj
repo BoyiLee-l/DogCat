@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C5606882865B09C0094FBC2 /* PetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5606872865B09C0094FBC2 /* PetListViewModel.swift */; };
+		2C7C66762869B7040060E407 /* LikeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7C66752869B7040060E407 /* LikeListViewModel.swift */; };
 		4C0C83E804A87896FA665FAE /* Pods_DogCat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E436895E3916FA29FF9ABFEA /* Pods_DogCat.framework */; };
 		CE0C12B124D01FD400A8A812 /* LikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C12B024D01FD400A8A812 /* LikeCell.swift */; };
 		CE0C12B424D1777300A8A812 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C12B324D1777300A8A812 /* UIColor.swift */; };
@@ -16,7 +17,6 @@
 		CE56B84124FDE16700AE30B2 /* gif5.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE56B84024FDE16700AE30B2 /* gif5.gif */; };
 		CE56B84324FDED3900AE30B2 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56B84224FDED3900AE30B2 /* UIViewController.swift */; };
 		CE56B84624FDF13D00AE30B2 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56B84524FDF13D00AE30B2 /* UIImageView.swift */; };
-		CE56B84824FDF23700AE30B2 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56B84724FDF23700AE30B2 /* UITableView.swift */; };
 		CE62248F24D2A25F00CEAAB0 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE62248E24D2A25F00CEAAB0 /* loading.gif */; };
 		CE73A61A24D904D90007437D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE73A61C24D904D90007437D /* InfoPlist.strings */; };
 		CE78B1A02480B6930047A9A5 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78B19F2480B6930047A9A5 /* MenuController.swift */; };
@@ -42,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		2C5606872865B09C0094FBC2 /* PetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetListViewModel.swift; sourceTree = "<group>"; };
+		2C7C66752869B7040060E407 /* LikeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeListViewModel.swift; sourceTree = "<group>"; };
 		4AA365E1D34577E495558EED /* Pods-DogCat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogCat.debug.xcconfig"; path = "Target Support Files/Pods-DogCat/Pods-DogCat.debug.xcconfig"; sourceTree = "<group>"; };
 		9A757D442882F4837F1E1497 /* Pods-DogCat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogCat.release.xcconfig"; path = "Target Support Files/Pods-DogCat/Pods-DogCat.release.xcconfig"; sourceTree = "<group>"; };
 		CE0C12B024D01FD400A8A812 /* LikeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCell.swift; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		CE56B84024FDE16700AE30B2 /* gif5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif5.gif; sourceTree = "<group>"; };
 		CE56B84224FDED3900AE30B2 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		CE56B84524FDF13D00AE30B2 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		CE56B84724FDF23700AE30B2 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		CE62248E24D2A25F00CEAAB0 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		CE73A61B24D904D90007437D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE73A62124D905C20007437D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -103,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				2C5606872865B09C0094FBC2 /* PetListViewModel.swift */,
+				2C7C66752869B7040060E407 /* LikeListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -159,7 +160,6 @@
 				CE0C12B324D1777300A8A812 /* UIColor.swift */,
 				CE56B84224FDED3900AE30B2 /* UIViewController.swift */,
 				CE56B84524FDF13D00AE30B2 /* UIImageView.swift */,
-				CE56B84724FDF23700AE30B2 /* UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -413,10 +413,10 @@
 				CE0C12B424D1777300A8A812 /* UIColor.swift in Sources */,
 				CE56B84324FDED3900AE30B2 /* UIViewController.swift in Sources */,
 				CE78B1AA2480D6E10047A9A5 /* dogData.swift in Sources */,
+				2C7C66762869B7040060E407 /* LikeListViewModel.swift in Sources */,
 				CE9C5850245AA5A8006F12D2 /* UserInfo.swift in Sources */,
 				CE56B84624FDF13D00AE30B2 /* UIImageView.swift in Sources */,
 				CE78B1A02480B6930047A9A5 /* MenuController.swift in Sources */,
-				CE56B84824FDF23700AE30B2 /* UITableView.swift in Sources */,
 				CE78B1A22480B69C0047A9A5 /* SidebarMenu.swift in Sources */,
 				CE9C5847245A7D91006F12D2 /* PetListVC.swift in Sources */,
 				CE0C12B124D01FD400A8A812 /* LikeCell.swift in Sources */,

@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import MapKit
+import RxCocoa
 
 class DetailVC: UIViewController {
     

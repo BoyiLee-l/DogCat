@@ -9,20 +9,11 @@
 import Foundation
 import Alamofire
 import RxCocoa
+import RxSwift
 
 class PetListViewModel {
-    
-    var dataList : [dogData] = [] {
-        didSet {
-            reloadTableView?()
-        }
-    }
-    
-    var newDataList : [dogData] = [] {
-        didSet {
-            reloadTableView?()
-        }
-    }
+   
+    var dataList = BehaviorRelay <[dogData]>(value:[])
     
     let getFile = GetFile()
     
@@ -39,13 +30,15 @@ class PetListViewModel {
     var sterilization = ""
     var bodytype = ""
     
+    let disposeBag = DisposeBag()
+    
     //MARK:-跟網路求去資料
     func getPetList(){
         getFile.getData(url: generateUrl()) { (data) in
-            self.dataList = data
-            //篩選條件將沒照片的排到後面
-            self.dataList = self.dataList.filter({ $0.albumFile != "" })
-//            print(self.dataList)
+            let  filterData = data.filter { $0.albumFile != ""}
+            self.dataList.accept(filterData)
+//            print(self.dataList.value)
+//            self.reloadTableView?()
         }
     }
     

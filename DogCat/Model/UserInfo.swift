@@ -33,8 +33,8 @@ class UserInfo: Object {
     
     
 }
-class RealmManeger {
-    
+
+class RealmManeger {    
     let realm = try! Realm()
     static let shared = RealmManeger()
     

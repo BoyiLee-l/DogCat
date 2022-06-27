@@ -108,6 +108,6 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource{
 
 }
 
-protocol SearchVCDelegate: class {
+protocol SearchVCDelegate: AnyObject {
     func doSomething(city: String, sex: String, age: String, body: String, sterilization: String)
 }

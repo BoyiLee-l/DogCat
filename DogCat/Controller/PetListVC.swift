@@ -10,7 +10,8 @@ import UIKit
 import Alamofire
 import Kingfisher
 import RealmSwift
-
+import RxSwift
+import RxCocoa
 
 /// 頁面狀態
 enum PageStatus {
@@ -38,30 +39,45 @@ class PetListVC: UIViewController {
     
     var viewModel = PetListViewModel()
     
+    let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackground()
-        setUI()
+        initialization()
         setupActivityView()
         addSideBarMenu(leftMenuButton: menuButton)
         viewModel.getPetList()
-        viewModel.reloadTableView = { [weak self] in
-            DispatchQueue.main.async {
-                self?.myTableView.reloadData()
-            }
-        }
+        bindTable()
     }
     
-    func setUI(){
-        myTableView.delegate = self
-        myTableView.dataSource = self
-        
+    func initialization() {
         switch animals {
         case .dog:
             self.navigationItem.title = "小狗列表"
         case .cat:
             self.navigationItem.title = "小貓列表"
         }
+    }
+    
+    func bindTable() {
+        myTableView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
+        
+            viewModel.dataList
+                .bind(to: myTableView.rx.items) { (tableView, row, element) in
+                let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as!
+                petCell
+            
+                cell.updateLabel.text = element.animalUpdate
+                let pkid = element.animalAreaPkid
+                cell.areaLabel.text = self.viewModel.getFile.areaName(pkid: pkid ?? 0)
+                let urls = element.albumFile ?? ""
+                cell.myPhoto.setupIndicatorType()
+                cell.myPhoto.kf.setImage(with: URL(string: urls), placeholder: UIImage(named: "noPhoto"))
+                return cell
+            }
+            .disposed(by: disposeBag)
     }
     
     @IBAction func showSearch(_ sender: Any) {
@@ -73,63 +89,15 @@ class PetListVC: UIViewController {
     
 }
 
-extension PetListVC: UITableViewDelegate, UITableViewDataSource{
+extension PetListVC: UITableViewDelegate{
+    
     // MARK: - Table view data source
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        if viewModel.newDataList.isEmpty {
-            return viewModel.dataList.count
-        } else {
-            return viewModel.newDataList.count
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as!
-        petCell
-        
-        if viewModel.dataList.isEmpty{
-            let alertController = UIAlertController(title: "沒有資料唷", message: "請重新再搜尋一次", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(okAction)
-            self.present(alertController, animated: true, completion: nil)
-        } else if viewModel.newDataList.isEmpty {
-            let data = viewModel.dataList[indexPath.row]
-            cell.updateLabel.text = data.animalUpdate
-            let pkid = data.animalAreaPkid
-            cell.areaLabel.text = viewModel.getFile.areaName(pkid: pkid ?? 0)
-            let urls = data.albumFile ?? ""
-            cell.myPhoto.setupIndicatorType()
-            cell.myPhoto.kf.setImage(with: URL(string: urls), placeholder: UIImage(named: "noPhoto"))
-        }else{
-            let data = viewModel.newDataList[indexPath.row]
-            cell.updateLabel.text = data.animalUpdate
-            let pkid = data.animalAreaPkid
-            cell.areaLabel.text = viewModel.getFile.areaName(pkid: pkid ?? 0)
-            let urls = data.albumFile ?? ""
-            cell.myPhoto.setupIndicatorType()
-            cell.myPhoto.kf.setImage(with: URL(string: urls), placeholder: UIImage(named: "noPhoto"))
-        }
-        return cell
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailed"{
             let next = segue.destination as! DetailVC
             let row = myTableView.indexPathForSelectedRow!.row
-            if viewModel.newDataList.isEmpty{
-                let data = viewModel.dataList[row]
-                next.animal = data
-            }else{
-                let data = viewModel.newDataList[row]
-                next.animal = data
-            }
+            let data = viewModel.dataList.value[row]
+            next.animal = data
         }
     }
     
@@ -143,18 +111,8 @@ extension PetListVC: UITableViewDelegate, UITableViewDataSource{
             DispatchQueue.main.asyncAfter(deadline: .now()) { [self] in
                 viewModel.skip += 100
                 print("skip = \(viewModel.skip)")
-                print("apiurl:\(viewModel.generateUrl())")
                 viewModel.getPetList()
-                viewModel.newDataList.append(contentsOf: viewModel.dataList)
-                //篩選條件將沒照片的排到後面
-                viewModel.newDataList = viewModel.newDataList.filter({ $0.albumFile != "" })
                 self.pageStatus = .NotLoadingMore
-                
-                viewModel.reloadTableView = { [weak self] in
-                    DispatchQueue.main.async {
-                        self?.myTableView.reloadData()
-                    }
-                }
             }
         }
     }
@@ -175,13 +133,7 @@ extension PetListVC: SearchVCDelegate{
         viewModel.age = caseEN.ageCh(age: viewModel.age)
         viewModel.bodytype = caseEN.bodytypeCh(bodytype: viewModel.bodytype)
         viewModel.sterilization = caseEN.sterilization(sterilization: viewModel.sterilization)
-        
         print(viewModel.pkid, viewModel.sex, viewModel.age, viewModel.bodytype, viewModel.sterilization)
-        
-        //MARK:判斷如果下新的條件,將原有陣列清空
-        if viewModel.pkid != 0 || viewModel.sex != "" || viewModel.age != "" || viewModel.bodytype != "" || viewModel.sterilization != ""{
-            viewModel.newDataList.removeAll()
-        }
         viewModel.getPetList()
     }
     

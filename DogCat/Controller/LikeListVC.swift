@@ -9,66 +9,67 @@
 import UIKit
 import RealmSwift
 import Kingfisher
+import RxCocoa
+import RxSwift
 
 class LikeListVC: UIViewController{
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     @IBOutlet weak var myTableView: UITableView!
-    var likeData = [UserInfo]()
+    
     let getFile = GetFile()
     
+    var viewModel = LikeListViewModel()
+    
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        myTableView.dataSource = self
-        myTableView.delegate = self
         setBackground()
         addSideBarMenu(leftMenuButton: menuButton)
         setUI()
-
+        bindTable()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setData()
-        print(likeData.count)
+        viewModel.getRealmData()
     }
     
-    func setData(){
-        likeData = RealmManeger.shared.fetchAll() 
-        myTableView.reloadData()
-    }
-}
-
-extension LikeListVC{
     func setUI(){
         navigationItem.title = "我的收藏"
     }
+    
+    func bindTable() {
+        myTableView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
+        
+        viewModel.likeData
+            .bind(to: myTableView.rx.items) { (tableView, row, element) in
+                let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as!
+                LikeCell
+                
+                let urls = element.albumFile
+                cell.myPhoto.kf.setImage(with: URL(string: urls), placeholder: UIImage(named: "noPhoto"))
+                cell.updateLabel.text = element.animalUpdate
+                let pkid = element.animalAreaPkid
+                cell.areaLabel.text = self.getFile.areaName(pkid: pkid)
+                print(element.collection)
+                
+                return cell
+            }
+            .disposed(by: disposeBag)
+    }
 }
 
-extension LikeListVC: UITableViewDelegate,UITableViewDataSource{
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return likeData.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LikeCell
-        
-        let urls = likeData[indexPath.row].albumFile
-        cell.myPhoto.kf.setImage(with: URL(string: urls), placeholder: UIImage(named: "noPhoto"))
-        cell.updateLabel.text = likeData[indexPath.row].animalUpdate
-        let pkid = likeData[indexPath.row].animalAreaPkid
-        cell.areaLabel.text = getFile.areaName(pkid: pkid)
-        print(likeData[indexPath.row].collection)
-        
-        return cell
-    }
+extension LikeListVC: UITableViewDelegate{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "like"{
             let next = segue.destination as! DetailVC
             let row = myTableView.indexPathForSelectedRow!.row
-            let data = likeData[row]
+            let data = viewModel.likeData.value[row]
             next.userInfo = data
             next.detailData = .資料庫
             print(next.userInfo)
@@ -78,10 +79,9 @@ extension LikeListVC: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let data = likeData[indexPath.row]
+            let row = myTableView.indexPathForSelectedRow!.row
+            let data = viewModel.likeData.value[row]
             RealmManeger.shared.delete(animal: data)
-            likeData.remove(at: indexPath.row)
-            myTableView.reloadData()
         }
         
     }

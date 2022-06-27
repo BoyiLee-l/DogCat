@@ -16,9 +16,8 @@ class GetFile {
         AF.request(url).responseJSON{response in
             if let data = response.data {
                 do {
-                    let dataList = try JSONDecoder().decode( [dogData].self, from: data)
-                    completion(dataList)
-
+                    let result = try JSONDecoder().decode( [dogData].self, from: data)
+                    completion(result)
                 } catch {
                     print(error.localizedDescription)
                 }
