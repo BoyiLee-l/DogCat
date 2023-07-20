@@ -6,11 +6,11 @@ target 'DogCat' do
   use_frameworks!
 
   # Pods for DogCat
- pod 'Alamofire', '~> 5.0'
- pod 'SwiftyJSON', '~> 4.0'
+ pod 'Alamofire'
+ pod 'SwiftyJSON'
  pod 'Kingfisher'
  pod 'SnapKit'
- pod 'RealmSwift', '4.4.0'
+ pod 'RealmSwift'
  pod 'RxSwift'
  pod 'RxCocoa' 
  pod 'RxDataSources'

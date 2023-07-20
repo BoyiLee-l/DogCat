@@ -27,7 +27,7 @@ import Realm.Private
 
  Object schemas map to tables in the core database.
  */
-public struct ObjectSchema: CustomStringConvertible {
+@frozen public struct ObjectSchema: CustomStringConvertible {
 
     // MARK: Properties
 
@@ -47,6 +47,12 @@ public struct ObjectSchema: CustomStringConvertible {
 
     /// The object class the schema describes.
     public var objectClass: AnyClass { return rlmObjectSchema.objectClass }
+
+    /// Whether this object is embedded.
+    public var isEmbedded: Bool { return rlmObjectSchema.isEmbedded }
+
+    /// Whether this object is asymmetric.
+    public var isAsymmetric: Bool { return rlmObjectSchema.isAsymmetric }
 
     /// The property which serves as the primary key for the class the schema describes, if any.
     public var primaryKeyProperty: Property? {

@@ -592,7 +592,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.duncan.dogcat;
 				PRODUCT_NAME = "寵之家";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/duncanli/Documents/sideProject/DogCat/DogCat/View/SWRevealViewController/SlidebarMenu-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/duncanli/Desktop/sideProject/DogCat/DogCat/View/SWRevealViewController/SlidebarMenu-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -616,7 +616,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.duncan.dogcat;
 				PRODUCT_NAME = "寵之家";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/duncanli/Documents/sideProject/DogCat/DogCat/View/SWRevealViewController/SlidebarMenu-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/duncanli/Desktop/sideProject/DogCat/DogCat/View/SWRevealViewController/SlidebarMenu-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
